@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Textanalyzer from "./Textanalyzer.mjs";
+import "./App.css";
+import Nav from "./Nav.mjs";
+import {useState} from 'react'
 function App() {
+  const [mavmode, setMode] = useState({
+    background: 'black',
+    color: 'lightgray',
+  });
+
+  const [summ, setsumm] = useState({
+    background: 'gray',
+    color: 'black',
+  });
+
+  const funm = () => {
+    if (mavmode.background === 'black') {
+      setMode({
+        background: 'lightgray',
+        color: 'black',
+      });
+      document.body.style.background="white"
+      setsumm({
+        background: 'white',
+        color: 'black',
+      });
+    } else {
+      setMode({
+        background: 'black',
+        color: 'lightgray',
+      });
+      document.body.style.background="darkgray"
+      setsumm({
+        background: 'gray',
+        color: 'black',
+      });
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Nav ini={mavmode} cc={mavmode} fun={funm}/>
+      <Textanalyzer bc={summ} />
+    </>
   );
 }
 

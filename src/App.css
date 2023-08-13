@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+body,
+html {
+    width: 100%;
+
+}
+button{
+    cursor:pointer;
+}
+body {
+
+    background: rgb(87, 85, 85);
+ font-family:"hammersmith one";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::before,
+*::after { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar{
+  display:flex;
+  background:black;
+  gap:0.5em;
+  padding:0.5em;
+  justify-content: space-around;
+  width:100%;
+  position:fixed;
+  top:0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar h2{
+  font-family:"hammersmith one";
+  font-size:1.5rem;
+  color:lightgray;
 }
+.contain{
 
-.App-link {
-  color: #61dafb;
+display:flex;
+width:100%;
+gap:0.5em;
+padding:1em;
+width:800px;
+flex-direction: column;
+margin-top:45px;
 }
+.cenet{
+  width: 100%;
+  background:gray;
+  display:flex;
+justify-content: center;
+}
+.head{
+  display:flex;
+  gap:2em;
+}
+textarea{
+  padding:0.3em;
+  outline:none;
+  resize:none;
+  border:2px solid red;
+  border-radius:10px;
+}
+textarea:hover{
+  border-color:blue;
+}
+.contain button{
+   width:100px;
+   padding:0.3em;
+   font-family:"hammersmith one";
+   outline:none;
+   background:skyblue;
+   border:2px solid black;
+}
+.btngrps{
+  display:flex;
+  gap:0.3em;
+}
+.preview{
+  width:750px;
+  border-radius:10px;
+  background:rgb(61, 56, 56);
+  color:white;
+  text-align:justify;
+  padding:0.5em;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.box{
+  width:35px;
+  height:35px;
+  background:darkgray;
+  outline:none;
+  border-color:transparent;
+  border-radius:50%;
+  box-shadow:0px 0px 5px lightgray;
+}
+.fa-lightbulb{
+  font-size:1.4rem;
+  color:black;
+}
+.preview p{
+  width:730px;
 }
